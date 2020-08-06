@@ -3,6 +3,8 @@
 <head>
     <title>صفحۀ اصلی | علی بابا</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/hotel-select.js" defer></script>
 </head>
 
 <body class="home-page">
@@ -254,262 +256,32 @@
                             <div class="container">
                                 <!-- CITY SELECTION -->
                                 <div class="badge-container text-center mt-2">
-                                    <a class="badge badge--outline mx-1 badge--orange">
+                                    <a class="badge badge--outline mx-1 badge--orange" id="istanbul">
                                         <small class="w-300">استانبول</small>
                                     </a>
-                                    <a class="badge badge--outline mx-1">
+                                    <a class="badge badge--outline mx-1" id="dubai">
                                         <small class="w-300">دبی</small>
                                     </a>
-                                    <a class="badge badge--outline mx-1">
+                                    <a class="badge badge--outline mx-1" id="paris">
                                         <small class="w-300">پاریس</small>
                                     </a>
-                                    <a class="badge badge--outline mx-1">
+                                    <a class="badge badge--outline mx-1" id="ankara">
                                         <small class="w-300">آنکارا</small>
                                     </a>
-                                    <a class="badge badge--outline mx-1">
+                                    <a class="badge badge--outline mx-1"  id="baku">
                                         <small class="w-300">باکو</small>
                                     </a>
-                                    <a class="badge badge--outline mx-1">
+                                    <a class="badge badge--outline mx-1" id="tblisi">
                                         <small class="w-300">تفلیس</small>
                                     </a>
                                 </div>
                                 <!-- HOTEL SELECTION -->
-                                <div class="row">
-                                    <!-- HOTEL 1 -->
-                                    <div class="col-xs-12 col-sm-6 col-md-4">
-                                        <div class="c-popular-hotel-card">
-                                            <a href="" target="_blank" rel="nofollow">
-                                                <div class="card-image" style="background-image: url(images/hotel1.jpg);">
-                                                    <div class="card-overlay">
-                                                    </div>
-                                                </div>
-                                                <div class="card-content">
-                                                    <div class="flex flex-justify-space-between flex-align-center rtl font-en">
-                                                        <p class="text-ellipsis text-darker w-500 font-16 m-0">
-                                                            Akgün Istanbul
-                                                        </p>
-                                                        <div class="rate-stars">
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                        </div>
-                                                    </div>
-                                                    <hr class="mt-2">
-                                                    <div class="flex flex-justify-space-between flex-align-center">
-                                                        <div>
-                                                            <div class="text-gray w-normal">
-                                                                شروع قیمت از
-                                                            </div>
-                                                            <strong class="text-blue">
-                                                                7,752,000 ریال
-                                                            </strong>
-                                                        </div>
-                                                        <button class="btn btn-primary content-btn mt-3">مشاهده و رزرو</button>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- HOTEL 2 -->
-                                    <div class="col-xs-12 col-sm-6 col-md-4">
-                                        <div class="c-popular-hotel-card">
-                                            <a href="" target="_blank" rel="nofollow">
-                                                <div class="card-image" style="background-image: url(images/hotel2.jpg);">
-                                                    <div class="card-overlay">
-                                                        <div class="card-rate">
-                                                            <div class="rate-number font-16">8.3</div>
-                                                            <div class="rate-text font-10">بسیار عالی</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-content">
-                                                    <div class="flex flex-justify-space-between flex-align-center rtl font-en">
-                                                        <p class="text-ellipsis text-darker w-500 font-16 m-0">
-                                                            Antik Istanbul
-                                                        </p>
-                                                        <div class="rate-stars">
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate"></i>
-                                                        </div>
-                                                    </div>
-                                                    <hr class="mt-2">
-                                                    <div class="flex flex-justify-space-between flex-align-center">
-                                                        <div>
-                                                            <div class="text-gray w-normal">
-                                                                شروع قیمت از
-                                                            </div>
-                                                            <strong class="text-blue">
-                                                                5,612,000 ریال
-                                                            </strong>
-                                                        </div>
-                                                        <button class="btn btn-primary content-btn mt-3">مشاهده و رزرو</button>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- HOTEL 3 -->
-                                    <div class="col-xs-12 col-sm-6 col-md-4">
-                                        <div class="c-popular-hotel-card">
-                                            <a href="" target="_blank" rel="nofollow">
-                                                <div class="card-image" style="background-image: url(images/hotel3.jpg);">
-                                                    <div class="card-overlay">
-                                                    </div>
-                                                </div>
-                                                <div class="card-content">
-                                                    <div class="flex flex-justify-space-between flex-align-center rtl font-en">
-                                                        <p class="text-ellipsis text-darker w-500 font-16 m-0">
-                                                            Black Bird Hotel- Istanbul
-                                                        </p>
-                                                        <div class="rate-stars">
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate"></i>
-                                                        </div>
-                                                    </div>
-                                                    <hr class="mt-2">
-                                                    <div class="flex flex-justify-space-between flex-align-center">
-                                                        <div>
-                                                            <div class="text-gray w-normal">
-                                                                شروع قیمت از
-                                                            </div>
-                                                            <strong class="text-blue">
-                                                                4,554,000 ریال
-                                                            </strong>
-                                                        </div>
-                                                        <button class="btn btn-primary content-btn mt-3">مشاهده و رزرو</button>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- HOTEL 4 -->
-                                    <div class="col-xs-12 col-sm-6 col-md-4">
-                                        <div class="c-popular-hotel-card">
-                                            <a href="" target="_blank" rel="nofollow">
-                                                <div class="card-image" style="background-image: url(images/hotel4.jpg);">
-                                                    <div class="card-overlay">
-                                                    </div>
-                                                </div>
-                                                <div class="card-content">
-                                                    <div class="flex flex-justify-space-between flex-align-center rtl font-en">
-                                                        <p class="text-ellipsis text-darker w-500 font-16 m-0">
-                                                            Carlton Hotel
-                                                        </p>
-                                                        <div class="rate-stars">
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate"></i>
-                                                        </div>
-                                                    </div>
-                                                    <hr class="mt-2">
-                                                    <div class="flex flex-justify-space-between flex-align-center">
-                                                        <div>
-                                                            <div class="text-gray w-normal">
-                                                                شروع قیمت از
-                                                            </div>
-                                                            <strong class="text-blue">
-                                                                5,507,000 ریال
-                                                            </strong>
-                                                        </div>
-                                                        <button class="btn btn-primary content-btn mt-3">مشاهده و رزرو</button>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- HOTEL 5 -->
-                                    <div class="col-xs-12 col-sm-6 col-md-4">
-                                        <div class="c-popular-hotel-card">
-                                            <a href="" target="_blank" rel="nofollow">
-                                                <div class="card-image" style="background-image: url(images/hotel5.jpg);">
-                                                    <div class="card-overlay">
-                                                        <div class="card-rate">
-                                                            <div class="rate-number font-16">9</div>
-                                                            <div class="rate-text font-10">فوق العاده</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-content">
-                                                    <div class="flex flex-justify-space-between flex-align-center rtl font-en">
-                                                        <p class="text-ellipsis text-darker w-500 font-16 m-0">
-                                                            Intercontinental Istanbul
-                                                        </p>
-                                                        <div class="rate-stars">
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                        </div>
-                                                    </div>
-                                                    <hr class="mt-2">
-                                                    <div class="flex flex-justify-space-between flex-align-center">
-                                                        <div>
-                                                            <div class="text-gray w-normal">
-                                                                شروع قیمت از
-                                                            </div>
-                                                            <strong class="text-blue">
-                                                                12,063,000 ریال
-                                                            </strong>
-                                                        </div>
-                                                        <button class="btn btn-primary content-btn mt-3">مشاهده و رزرو</button>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- HOTEL 6 -->
-                                    <div class="col-xs-12 col-sm-6 col-md-4">
-                                        <div class="c-popular-hotel-card">
-                                            <a href="" target="_blank" rel="nofollow">
-                                                <div class="card-image" style="background-image: url(images/hotel6.jpg);">
-                                                    <div class="card-overlay">
-                                                    </div>
-                                                </div>
-                                                <div class="card-content">
-                                                    <div class="flex flex-justify-space-between flex-align-center rtl font-en">
-                                                        <p class="text-ellipsis text-darker w-500 font-16 m-0">
-                                                            Conrad Istanbul Bosphorus
-                                                        </p>
-                                                        <div class="rate-stars">
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                            <i class="icon-star-rate active"></i>
-                                                        </div>
-                                                    </div>
-                                                    <hr class="mt-2">
-                                                    <div class="flex flex-justify-space-between flex-align-center">
-                                                        <div>
-                                                            <div class="text-gray w-normal">
-                                                                شروع قیمت از
-                                                            </div>
-                                                            <strong class="text-blue">
-                                                                11,991,000 ریال
-                                                            </strong>
-                                                        </div>
-                                                        <button class="btn btn-primary content-btn mt-3">مشاهده و رزرو</button>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
+                                <div class="row" id="hotels">
+                                    
                                 </div>
                             </div>
+                        </section>
                     </div>
-                    </section>
-                    <div class="text-center my-4"></div>
                 </div>
             </div>
 
