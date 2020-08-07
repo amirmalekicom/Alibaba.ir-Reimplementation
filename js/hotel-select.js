@@ -7,7 +7,7 @@ let changeSelectedCity = (newSelectedCityName) => {
 }
 
 
-function addHotel(name, stars, price, image, rate_number, rate_desc) {
+function addHotel(id, name, stars, price, image, rate_number, rate_desc) {
     // StackOverflow: Best way to create nested HTML elements with jQuery
     $.extend({
     addEl: function(el, props) {
@@ -22,7 +22,7 @@ function addHotel(name, stars, price, image, rate_number, rate_desc) {
     $('#hotels').append(
         $.addEl('div', {'class': 'col-xs-12 col-sm-6 col-md-4'}).append(
             $.addEl('div', {'class': 'c-popular-hotel-card'}).append(
-                $.addEl('a', {'href': 'TODO', 'target': '_blank', 'rel': 'nofollow'}).append(
+                $.addEl('a', {'href': 'http://37.152.185.50:8080/hotels/hotel/' + id, 'target': '_blank', 'rel': 'nofollow'}).append(
                     $.addEl('div', {'class': 'card-image', 'style': 'background-image: url(' + image + ');'}).append(
                         function () {
                             if (rate_number >= 0) {
@@ -44,7 +44,7 @@ function addHotel(name, stars, price, image, rate_number, rate_desc) {
                             $.addEl('div', {'class': 'rate-stars'}).append(
                                 function() {
                                     var allStars = new Array(5);
-                                    for(i = 0; i < 5; i++) {
+                                    for(let i = 0; i < 5; i++) {
                                         if(i<stars)
                                             allStars[i] = $.addEl('i', {'class': 'icon-star-rate active'})
                                         else
@@ -89,8 +89,8 @@ function fetchHotels(cityName) {
         if (this.readyState == 4 && this.status == 200) {
             let hotels = JSON.parse(ajaxReq.responseText);
             console.log(hotels);
-            for(iHotel = 0; iHotel < hotels.length; iHotel++) {
-                addHotel(hotels[iHotel].name, hotels[iHotel].stars, hotels[iHotel].price, hotels[iHotel].image, hotels[iHotel].rate_number, hotels[iHotel].rate_desc);
+            for(let i = 0; i < hotels.length; i++) {
+                addHotel(hotels[i].id, hotels[i].name, hotels[i].stars, hotels[i].price, hotels[i].image, hotels[i].rate_number, hotels[i].rate_desc);
             }
             
         }
